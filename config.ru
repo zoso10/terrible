@@ -26,8 +26,8 @@ class Application
       end
       [
         201,
-        { Rack::CONTENT_TYPE => "text/plain", Rack::CONTENT_LENGTH => "2" },
-        ["OK"],
+        { Rack::CONTENT_TYPE => "text/plain", Rack::CONTENT_LENGTH => "7" },
+        ["Created"],
       ]
     elsif env[Rack::REQUEST_METHOD] == Rack::GET && env[Rack::PATH_INFO].match?(/#{USERS_PATH}\/\d+/)
       id = env[Rack::REQUEST_PATH].gsub("/users/", "")
